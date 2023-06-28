@@ -1,0 +1,201 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    /* fonte de estilização, estou colocando a 1° opção do estilo da fonte */
+    /* caso nao de certo a 1° opção, para usar a 2° opção */
+
+    max-width: 1280px;
+    /* comando de largura maxima do corpo da página */
+
+    margin: 0 auto;
+    /* espaçamento interno, 1° posicao em cima e embaixo, 2° posicao dos lados */
+
+    background-color: #5e5b5bad;
+
+    color: #333333;
+    /* cor de texto */
+}
+
+body.modo-escuro{
+    /* class para ser utilizada com o JS*/
+
+
+    background-color: #212121;
+    /* body.modo-escuro é uma classe, estou chamando uma class e estilizando ela*/
+
+    color: #f5f5f5;
+}
+
+header{
+
+    display: flex;
+    flex-direction: flex;
+    justify-content: space-between;
+    /* display flex (um do lado do outro) + o comando justify (dá o espaçamento) juntos fazem com que os elementos fiquem na mesma linha, porém um ao lado do outro, ou seja, um no extremo a direita e o outro na extrema a esquerda */
+
+    padding: 25px;
+    /* espaçamento entre a borda e o nosso elemento, espaçamento externo */
+}
+
+header .logo,
+header .imagem-botao{
+    /* estilsa pra mim a classe logo que esta dentro do header */
+    /* usando a virgula eu posso estilizar os dois elementos sem ficar redundante no código*/
+
+    width: 30px;
+    /* tamanho da imagem das classes definidas acima*/
+
+    transition: 0.2s ease-in-out;
+    /* efeito de entrada e saida */
+}
+
+header #botao-alterar-tema{
+    /* chamando a # você vai estilizar o ID */
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    /* é para aparecer a maozinha do mouse quando passar em cima da imagem */
+}
+
+header .logo:hover,
+header .imagem-botao:hover,
+main .cartao-pokemon:hover{
+    transform: scale(1.10);
+
+    cursor: pointer;
+    /* é para aparecer a maozinha do mouser quando passar em cima da imagem */
+}
+
+main{
+    padding: 25px;
+    /* espaçamento entre o meu elemento e a borda, espaçamento externo */
+}
+main .listagem-pokemon{
+    display: flex;
+    /* colocando a listagem uma do lado do outro*/
+    /* para atribuir o flex ao filho, o pai também precisa utilizar o flex*/
+
+    flex-wrap: wrap;
+    /* quebra automatica de linha se os elementos nao couberem todos na mesma linha */
+
+    gap: 30px;
+    /* espaçamento entre os cartões*/
+
+    justify-content: center;
+    /* justificar o conteúdo no centro */
+}
+
+
+main .cartao-pokemon{
+    background-color: #d8e3ec;
+    width: 200px;
+
+    padding: 15px;
+    /* espaçamento entre o meu elemento e a borda, espaçamento externo */
+
+    display: flex;
+    /* coloca um do lado do outro */
+
+    flex-direction: column;
+    /* coloca o flex um embaixo do outro */
+
+    align-items: center;
+    /* alinha os itens no centro */
+
+    gap: 15px;
+    /* espaçamento entre os elementos */
+
+    border-radius: 20px;
+    /* borda arredondada */
+
+    transition: 0.2s ease-in-out;
+    /* efeito de entrada e saida */
+}
+
+main .cartao-pokemon:hover{
+    background-color: #96d9d6;
+    /* como eu usei o transition acima, agora estou colocando uma cor, porque quando passar o mouse */
+    /* a cor do elemento vai mudar de acordo com o elemento que o mouser estiver pousado em cima */
+}
+
+.modo-escuro .cartao-pokemon{
+    background-color: #a8a8a8;
+    /* fará com que ao clicar no botão sol, mude para o modo escuro da página */
+}
+
+main .cartao-pokemon .informacoes{
+    display: flex;
+    /*coloca os dois span do html na mesma linha*/
+
+    justify-content: space-between;
+    /* ajusta o espaço entre os dois span */
+
+    border: 1px solid #333333;
+    /*borda de 1px solido e a cor */
+
+    border-radius: 10px;
+}
+
+main .cartao-pokemon .informacoes span{
+    /* estilização do nome de cada cartão com a numeração */
+
+    padding: 5px;
+    font-size: 17px;
+
+    text-transform: uppercase;
+    /*padroniza as letras para maiusculas*/
+}
+
+main .cartao-pokemon .gif{
+    /*padronização do tamanho do gif*/
+
+    width: 80px;
+    height: 80px;
+}
+
+main .cartao-pokemon .tipos{
+    /*estilização dos tipos de cada animal*/
+
+    display: flex;
+
+    gap: 15px;
+    /*espaçamento entre os tipos*/
+}
+
+main .cartao-pokemon .tipo{
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.grama{
+    background-color: #7ac74c;
+}
+
+.veneno{
+    background-color: #df67ddfb
+}
+
+.fogo{
+    background-color: #ee8130;
+}
+
+.agua{
+    background-color: #6390f0;
+}
+
+.inseto{
+    background-color: #a6b91a;
+}
+
+main .descricao{
+    max-height: 80px;
+    /* padronizando a altura do meu cartão*/
+
+    overflow-y: scroll;
+    /*overflow vai pegar o conteudo que está transbordando fora da caixa e esconder dentro da caixa*/
+    /*scroll é a barra de rolagem*/
+
+    font-size: 14px;
+    padding-right: 10px;
+    /*paddin está estilizando e colocando pra direita para o texto nao ficar colado na barra de rolagem*/
+}

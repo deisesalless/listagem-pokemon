@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* o asterisco é um seletor do css */
+
+ul{
+    list-style: none;
+}
+
+/* arquivo reserte é para resertar alguns estilos padrões do html */
